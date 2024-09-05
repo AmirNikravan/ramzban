@@ -15,10 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QAbstractItemView, QApplication, QCheckBox, QGroupBox,
-    QHBoxLayout, QLabel, QLineEdit, QListWidget,
-    QListWidgetItem, QMainWindow, QPushButton, QSizePolicy,
-    QSpacerItem, QTextEdit, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QAbstractItemView, QApplication, QGroupBox, QHBoxLayout,
+    QLabel, QLineEdit, QListWidget, QListWidgetItem,
+    QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
+    QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -50,17 +50,6 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8 = QHBoxLayout()
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.checkBox = QCheckBox(self.centralwidget)
-        self.checkBox.setObjectName(u"checkBox")
-        font1 = QFont()
-        font1.setFamilies([u"IRANSansXFaNum"])
-        font1.setBold(True)
-        self.checkBox.setFont(font1)
-        self.checkBox.setChecked(True)
-        self.checkBox.setTristate(False)
-
-        self.horizontalLayout_8.addWidget(self.checkBox)
-
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_8.addItem(self.horizontalSpacer)
@@ -92,11 +81,11 @@ class Ui_MainWindow(object):
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
         self.label_2.setSizePolicy(sizePolicy2)
-        font2 = QFont()
-        font2.setFamilies([u"IRANSansXFaNum"])
-        font2.setPointSize(10)
-        font2.setBold(True)
-        self.label_2.setFont(font2)
+        font1 = QFont()
+        font1.setFamilies([u"IRANSansXFaNum"])
+        font1.setPointSize(10)
+        font1.setBold(True)
+        self.label_2.setFont(font1)
 
         self.horizontalLayout_8.addWidget(self.label_2)
 
@@ -107,29 +96,32 @@ class Ui_MainWindow(object):
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
         self.groupBox_2 = QGroupBox(self.centralwidget)
         self.groupBox_2.setObjectName(u"groupBox_2")
-        self.groupBox_2.setFont(font1)
+        font2 = QFont()
+        font2.setFamilies([u"IRANSansXFaNum"])
+        font2.setBold(True)
+        self.groupBox_2.setFont(font2)
         self.groupBox_2.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.verticalLayout_2 = QVBoxLayout(self.groupBox_2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.horizontalLayout_4 = QHBoxLayout()
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.listWidget = QListWidget(self.groupBox_2)
-        self.listWidget.setObjectName(u"listWidget")
+        self.listWidget_filename_decrypt = QListWidget(self.groupBox_2)
+        self.listWidget_filename_decrypt.setObjectName(u"listWidget_filename_decrypt")
         sizePolicy3 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Maximum)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.listWidget.sizePolicy().hasHeightForWidth())
-        self.listWidget.setSizePolicy(sizePolicy3)
-        self.listWidget.setMinimumSize(QSize(0, 0))
-        self.listWidget.setMaximumSize(QSize(16777215, 53))
+        sizePolicy3.setHeightForWidth(self.listWidget_filename_decrypt.sizePolicy().hasHeightForWidth())
+        self.listWidget_filename_decrypt.setSizePolicy(sizePolicy3)
+        self.listWidget_filename_decrypt.setMinimumSize(QSize(0, 0))
+        self.listWidget_filename_decrypt.setMaximumSize(QSize(16777215, 53))
 
-        self.horizontalLayout_4.addWidget(self.listWidget)
+        self.horizontalLayout_4.addWidget(self.listWidget_filename_decrypt)
 
         self.label_8 = QLabel(self.groupBox_2)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setMinimumSize(QSize(45, 0))
         self.label_8.setMaximumSize(QSize(28, 19))
-        self.label_8.setFont(font2)
+        self.label_8.setFont(font1)
 
         self.horizontalLayout_4.addWidget(self.label_8)
 
@@ -138,19 +130,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.listWidget_2 = QListWidget(self.groupBox_2)
-        self.listWidget_2.setObjectName(u"listWidget_2")
-        sizePolicy3.setHeightForWidth(self.listWidget_2.sizePolicy().hasHeightForWidth())
-        self.listWidget_2.setSizePolicy(sizePolicy3)
-        self.listWidget_2.setMaximumSize(QSize(16777215, 103))
+        self.listWidget_fileaddress_decrypt = QListWidget(self.groupBox_2)
+        self.listWidget_fileaddress_decrypt.setObjectName(u"listWidget_fileaddress_decrypt")
+        sizePolicy3.setHeightForWidth(self.listWidget_fileaddress_decrypt.sizePolicy().hasHeightForWidth())
+        self.listWidget_fileaddress_decrypt.setSizePolicy(sizePolicy3)
+        self.listWidget_fileaddress_decrypt.setMaximumSize(QSize(16777215, 103))
 
-        self.horizontalLayout_5.addWidget(self.listWidget_2)
+        self.horizontalLayout_5.addWidget(self.listWidget_fileaddress_decrypt)
 
         self.label_10 = QLabel(self.groupBox_2)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setMinimumSize(QSize(60, 0))
         self.label_10.setMaximumSize(QSize(61, 16777215))
-        self.label_10.setFont(font2)
+        self.label_10.setFont(font1)
 
         self.horizontalLayout_5.addWidget(self.label_10)
 
@@ -163,7 +155,7 @@ class Ui_MainWindow(object):
         self.pushButton_decrypt = QPushButton(self.groupBox_2)
         self.pushButton_decrypt.setObjectName(u"pushButton_decrypt")
         self.pushButton_decrypt.setMinimumSize(QSize(81, 21))
-        self.pushButton_decrypt.setFont(font1)
+        self.pushButton_decrypt.setFont(font2)
         self.pushButton_decrypt.setStyleSheet(u"QPushButton{\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(44, 70, 140);\n"
@@ -178,7 +170,7 @@ class Ui_MainWindow(object):
         self.pushButton_choosefile_decrpyt = QPushButton(self.groupBox_2)
         self.pushButton_choosefile_decrpyt.setObjectName(u"pushButton_choosefile_decrpyt")
         self.pushButton_choosefile_decrpyt.setMinimumSize(QSize(81, 21))
-        self.pushButton_choosefile_decrpyt.setFont(font1)
+        self.pushButton_choosefile_decrpyt.setFont(font2)
         self.pushButton_choosefile_decrpyt.setStyleSheet(u"QPushButton{\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(44, 70, 140);\n"
@@ -202,7 +194,7 @@ class Ui_MainWindow(object):
 
         self.groupBox = QGroupBox(self.centralwidget)
         self.groupBox.setObjectName(u"groupBox")
-        self.groupBox.setFont(font1)
+        self.groupBox.setFont(font2)
         self.groupBox.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.verticalLayout = QVBoxLayout(self.groupBox)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -225,7 +217,7 @@ class Ui_MainWindow(object):
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMinimumSize(QSize(45, 0))
         self.label_3.setMaximumSize(QSize(28, 19))
-        self.label_3.setFont(font2)
+        self.label_3.setFont(font1)
 
         self.horizontalLayout.addWidget(self.label_3)
 
@@ -247,7 +239,7 @@ class Ui_MainWindow(object):
         self.label_5.setObjectName(u"label_5")
         self.label_5.setMinimumSize(QSize(60, 0))
         self.label_5.setMaximumSize(QSize(61, 16777215))
-        self.label_5.setFont(font2)
+        self.label_5.setFont(font1)
 
         self.horizontalLayout_2.addWidget(self.label_5)
 
@@ -260,7 +252,7 @@ class Ui_MainWindow(object):
         self.pushButton_encrypt = QPushButton(self.groupBox)
         self.pushButton_encrypt.setObjectName(u"pushButton_encrypt")
         self.pushButton_encrypt.setMinimumSize(QSize(81, 21))
-        self.pushButton_encrypt.setFont(font1)
+        self.pushButton_encrypt.setFont(font2)
         self.pushButton_encrypt.setStyleSheet(u"QPushButton{\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(44, 70, 140);\n"
@@ -275,7 +267,7 @@ class Ui_MainWindow(object):
         self.pushButton_choosefile_encrypt = QPushButton(self.groupBox)
         self.pushButton_choosefile_encrypt.setObjectName(u"pushButton_choosefile_encrypt")
         self.pushButton_choosefile_encrypt.setMinimumSize(QSize(81, 21))
-        self.pushButton_choosefile_encrypt.setFont(font1)
+        self.pushButton_choosefile_encrypt.setFont(font2)
         self.pushButton_choosefile_encrypt.setStyleSheet(u"QPushButton{\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgb(44, 70, 140);\n"
@@ -313,7 +305,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u0631\u0645\u0632\u0628\u0627\u0646", None))
-        self.checkBox.setText(QCoreApplication.translate("MainWindow", u"\u06a9\u0644\u06cc\u062f \u067e\u06cc\u0634\u0641\u0631\u0636", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u06a9\u0644\u06cc\u062f:", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"\u0631\u0645\u0632\u06af\u0634\u0627\u06cc\u06cc", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"\u0646\u0627\u0645 \u0641\u0627\u06cc\u0644 :", None))
