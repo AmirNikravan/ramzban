@@ -61,13 +61,47 @@
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
         </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>40</width>
+          <width>18</width>
           <height>20</height>
          </size>
         </property>
        </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_randomkey">
+        <property name="minimumSize">
+         <size>
+          <width>64</width>
+          <height>25</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>IRANSansXFaNum</family>
+          <pointsize>8</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgb(44, 70, 140);
+border-radius : 5px;
+}
+QPushButton:hover{
+background-color: rgb(170, 170, 127);
+}</string>
+        </property>
+        <property name="text">
+         <string>کلید تصادفی</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QLineEdit" name="lineEdit">
@@ -79,9 +113,17 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>245</width>
+          <width>473</width>
           <height>24</height>
          </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>IRANSansXFaNum</family>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
         </property>
         <property name="styleSheet">
          <string notr="true">QLineEdit{
