@@ -42,13 +42,13 @@ class mainWindow(QMainWindow):
             self.file_decrypt, _ = QFileDialog.getOpenFileNames(
                 self, "فایل مورد نظر را انتخاب کنید"
             )
-            self.ui.listWidget_filename_encrpyt.clear()
-            self.ui.listWidget_fileaddress_encrypt.clear()
+            self.ui.listWidget_filename_decrypt.clear()
+            self.ui.listWidget_fileaddress_decrypt.clear()
             # print(self.file_encrypt)
-            for file_path in self.file_encrypt:
+            for file_path in self.file_decrypt:
                 file_name = os.path.basename(file_path)
-                self.ui.listWidget_filename_encrpyt.addItem(file_name)
-                self.ui.listWidget_fileaddress_encrypt.addItem(file_path)
+                self.ui.listWidget_filename_decrypt.addItem(file_name)
+                self.ui.listWidget_fileaddress_decrypt.addItem(file_path)
             log_entry = (
                 f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} :: "
                 f"<span style='color: green;'>Decrypt Files imported Successfully</span><br>"
