@@ -21,10 +21,11 @@ class mainWindow(QMainWindow):
         )
         self.ui.pushButton_encrypt.clicked.connect(self.encrypt)
         self.ui.pushButton_randomkey.clicked.connect(self.create_key)
+        self.ui.pushButton_decrypt.clicked.connect(self.decrypt)
         self.file_encrypt = None
         self.file_decrypt = None
         self.ui.textEdit.insertPlainText("logs : \n")
-
+        
     def create_key(self):
         self.ui.lineEdit.clear()
         self.key = Fernet.generate_key()
@@ -42,7 +43,7 @@ class mainWindow(QMainWindow):
         cipher_suite = Fernet(self.key)
         self.directory("en")
         for i in self.file_encrypt:
-            with open(os.path.basename(i), "rb") as file:
+            with open(i, "rb") as file:
                 file_data = file.read()
             encrypted_data = cipher_suite.encrypt(file_data)
             with open(f"./encrypted/encrypted_{ os.path.basename(i)}", "wb") as file:
@@ -59,7 +60,7 @@ class mainWindow(QMainWindow):
         cipher_suite = Fernet(self.key)
         self.directory("de")
         for i in self.file_decrypt:
-            with open(os.path.basename(i), "rb") as file:
+            with open(i, "rb") as file:
                 file_data = file.read()
             decrpyted_file = cipher_suite.decrypt(file_data)
             with open(f"./decrypted/decrypted_{ os.path.basename(i)}", "wb") as file:
