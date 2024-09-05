@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (QAbstractItemView, QApplication, QGroupBox, QHBox
     QLabel, QLineEdit, QListWidget, QListWidgetItem,
     QMainWindow, QPushButton, QSizePolicy, QSpacerItem,
     QTextEdit, QVBoxLayout, QWidget)
+import rsc_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -33,7 +34,11 @@ class Ui_MainWindow(object):
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMinimumSize(QSize(600, 500))
         MainWindow.setMaximumSize(QSize(600, 500))
+        icon = QIcon()
+        icon.addFile(u":/Icon/icons8-encrypt-48.png", QSize(), QIcon.Normal, QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet(u"background-color: rgb(237, 237, 237);")
+        MainWindow.setIconSize(QSize(25, 25))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_3 = QVBoxLayout(self.centralwidget)
@@ -327,7 +332,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u0631\u0645\u0632\u0628\u0627\u0646", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u0631\u0645\u0632\u0628\u0627\u0646", None))
         self.pushButton_randomkey.setText(QCoreApplication.translate("MainWindow", u"\u06a9\u0644\u06cc\u062f \u062a\u0635\u0627\u062f\u0641\u06cc", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u06a9\u0644\u06cc\u062f:", None))
